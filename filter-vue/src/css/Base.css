@@ -1,0 +1,85 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+*{
+    /* 去除自带边距问题 */
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    left: 0;
+    top: 0;
+}
+.Init{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.self-card{
+    background-color: rgb(255, 255, 253);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+.card_title{
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.pup-back{
+    background-color: rgba(31, 23, 23, 0.445);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.self-pup{
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgb(255, 255, 253);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+    animation: pupShow 0.5s;
+    padding: 20px;
+}
+@keyframes pupShow {
+    from{
+        top: 0;
+    }
+    to{
+        top: 50%;
+    }
+}
+.pup-title{
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 20px;
+}
+.pup-close{
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
